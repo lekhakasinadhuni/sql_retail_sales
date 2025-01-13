@@ -1,4 +1,4 @@
-**Project Overview**
+##Project Overview
 
 **Project Title: Retail Sales Analysis**
 
