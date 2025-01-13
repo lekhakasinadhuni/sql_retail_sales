@@ -9,7 +9,7 @@
 4.	**Business Analysis:** Use SQL to answer specific business questions and derive insights from the sales data.
 
 # Project Structure
-## 1.Database Setup
+## 1. Database Setup
 • Database Creation: The project starts by creating a database named sql_project1.
 • Table Creation: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount. 
 ...sql
@@ -53,10 +53,10 @@ WHERE
     quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 ...
 
-## 3.Data Analysis
+## 3. Data Analysis
 The following SQL queries were developed to answer specific business questions:
 
-###1.	Understand Sales Trends:
+## 1. Understand Sales Trends:
 
 **Monthly and yearly trends**
 ...sql
@@ -95,7 +95,7 @@ else 'Winter'
  order by total_orders desc
 ...
 
-**2.	Customer Demographics:**
+## 2. Customer Demographics:
 
 **Age based analysis**
 ...sql
@@ -125,7 +125,7 @@ from retail_sales_new
 group by gender
 order by total_sales desc;
 ...
-**3.	Product Category Analysis**
+## 3. Product Category Analysis
 
 **Top-Selling Categories:**
 ...sql
@@ -137,7 +137,7 @@ from retail_sales_new
 group by category
 order by total_sales Desc;
 ...
-**4.	Pricing and Profitability Analysis**
+## 4. Pricing and Profitability Analysis
 
 **Profitability by Category**
 ...sql
@@ -155,7 +155,7 @@ from retail_sales_new
 group by category
 order by avg_price desc;
 ...
-**5.	Sales Efficiency**
+## 5. Sales Efficiency
 
 **Fastest-Selling Products (Quantity)**
 ...sql
@@ -165,7 +165,7 @@ from retail_sales_new
 group by category
 order by total_quantity desc;
 ...
-**6.	Customer Behavior**
+## 6. Customer Behavior
 
 **Most Active Customers**
 ...sql
@@ -176,7 +176,7 @@ group by customer_id
 order by total_transactions desc
 limit 5;
 ...
-**7.	Combined Analysis**
+## 7. Combined Analysis
 
 **Age Group vs. Category Analysis:**
 ...sql
@@ -203,7 +203,7 @@ select category,
  group by category, gender
  order by category;
 ...
-**8.	Top 5 customers based on the highest total sales**
+## 8. Top 5 customers based on the highest total sales
 ...sql
 select 
  customer_id, 
@@ -213,7 +213,7 @@ select
  order by total_sales desc
  limit 5;
 ...
-**9.	Total number of unique customers from each category:**
+## 9. Total number of unique customers from each category:
 ...sql
 select 
  category,
@@ -222,7 +222,7 @@ select
  group by category
  order by number_of_customers desc;
 ...
-**10.	Most Active Customers:**
+## 10. Most Active Customers:
 ...sql
 select distinct customer_id,
 count(*) as total_transactions 
@@ -232,14 +232,14 @@ order by total_transactions desc
 limit 5;
 ...
 
-**Findings**
+# Findings
 • Autumn recorded the highest number of orders, followed by Summer, Spring, and Winter, showing significant seasonal variations in sales.
 • Customers aged above 50 contributed the highest sales, while the Under 20 group had the least impact.
 • Sales were higher for Female, indicating a more engaged demographic.
 • Clothing was the most profitable, while others showed varying margins.
 • The highest-priced and fast selling category was Clothing, reflecting premium pricing strategies.
 
-**Conclusion**
+# Conclusion
 The data analysis provides valuable insights into sales trends, customer demographics, product performance, and customer behavior. Key takeaways include:
 
 • **Optimizing Seasonal Strategies:** Focus on peak-performing months and seasons, particularly Autumn and Summer, to maximize revenue.
